@@ -9,6 +9,18 @@
             <h2 style="font-family: NanumSquareRoundOTFL;">
                 {{ target_user.username }}
             </h2>
+            {% if target_user == user %}
+                <a href="{% url "account:update" pk=user.pk %}">
+                    <p>
+                        Change Info
+                    </p>
+                </a>
+                <a href="{% url "account:delete" pk=user.pk %}">
+                    <p>
+                        Quit
+                    </p>
+                </a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
