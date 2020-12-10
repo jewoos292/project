@@ -1,9 +1,9 @@
 from django.forms import ModelForm
 
-from prog.profileapp.models import Profile
+from .models import Profile
 
 
-class ProfileCreationFrom(ModelForm):
+class ProfileCreationForm(ModelForm):
     class Meta:
         model = Profile
         fields = ["image", "nickname", "message"]
