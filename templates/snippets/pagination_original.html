@@ -10,7 +10,7 @@
         {{ page_obj.number }}
     </a>
     {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}"
+        <a href="{% url 'articleapp:list' %}?page={{ page_obj.next_page_number }}"
            class="btn btn-secondary rounded-pill">
            {{ page_obj.next_page_number }}
         </a>

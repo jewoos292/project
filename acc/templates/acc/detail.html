@@ -8,9 +8,9 @@
             </p>
 
             {% if target_user.profile %}
-                <img style="height: 12rem; width: 12rem; margin-bottom: 2rem;border-radius: 20rem"
+                <img style="height: 12rem; width: 12rem; margin-bottom: 2rem;border-radius: 20rem; object-fit: cover;"
                      src="{{ target_user.profile.image.url }}" alt="">
-                <h2 style="font-family: NanumSquareRoundOTFL;">
+                <h2 style="font-family: 'NanumSquareRoundOTFL'">
                     {{ target_user.profile.nickname }}
 
                     {% if target_user == user %}

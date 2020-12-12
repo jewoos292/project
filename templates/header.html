@@ -1,20 +1,23 @@
-<div style="text-align:center; margin: 2rem 0;">
+<div class="program_header">
     <div>
-        <div>
-            <h1 style="font-family: 'Nerko One', cursive;">Pragmatic</h1>
-        </div>
-        <a href="{% url 'articleapp:list' %}">
+        <h1 class="program_logo">Program</h1>
+    </div>
+    <div class="program_header_navbar">
+        <a href="{% url 'articleapp:list' %}" class="program_header_nav">
             <span>Articles</span>
         </a>
+        <a href="{% url 'projectapp:list' %}" class="program_header_nav">
+            <span>Projects</span>
+        </a>
         {% if not user.is_authenticated %}
-            <a href="{% url 'account:login' %}?next={{ request.path }}">
+            <a href="{% url 'account:login' %}?next={{ request.path }}" class="program_header_nav">
                 <span>LogIn</span>
             </a>
-            <a href="{% url 'account:create' %}">
+            <a href="{% url 'account:create' %}" class="program_header_nav">
                 <span>SignUp</span>
             </a>
         {% else %}
-            <a href="{% url 'account:detail' pk=user.pk %}">
+            <a href="{% url 'account:detail' pk=user.pk %}" class="program_header_nav">
                 <span>MyPage</span>
             </a>
             <a href="{% url 'account:logout' %}?next={{ request.path }}">
