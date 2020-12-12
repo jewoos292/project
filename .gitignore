@@ -109,7 +109,7 @@ fabric.properties
 .env
 
 db.sqlite3
-
+prog
 .idea/
 
 __pycache__/
