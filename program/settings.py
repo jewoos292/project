@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     "commentapp",
     "projectapp",
     "subscribeapp",
-    
+
 ]
 
 MIDDLEWARE = [
@@ -138,7 +138,7 @@ STATICFILES_DIRS = [
     BASE_DIR, "static",
 ]
 
-LOGIN_REDIRECT_URL = reverse_lazy('account:hello')
+LOGIN_REDIRECT_URL = reverse_lazy('home')
 LOGOUT_REDIRECT_URL = reverse_lazy('account:login')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
