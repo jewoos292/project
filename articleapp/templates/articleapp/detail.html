@@ -10,9 +10,9 @@
         </h5>
         <hr>
         <img src="{{ target_article.image.url }}" alt="" style="width: 100%; margin: 1rem 0; border-radius: 11rem; ">
-        <p>
-            {{ target_article.content }}
-        </p>
+        <div class="text-left">
+            {{ target_article.content | safe }}
+        </div>
         {% if target_article.writer == user %}
             <a href="{% url 'articleapp:update' pk=target_article.pk %}" class="btn btn-primary rounded-pill col-3">
                 Update
